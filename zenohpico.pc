@@ -1,8 +1,8 @@
-prefix=/usr/local
+prefix=D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/_install
 
 Name: zenohpico
 Description: 
 URL: 
-Version: 1.0.20241210dev
+Version: 1.0.20241223dev
 Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib -lzenohpico

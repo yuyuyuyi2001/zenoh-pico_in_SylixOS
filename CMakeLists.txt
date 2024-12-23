@@ -94,7 +94,12 @@ else()
   if(CMAKE_SYSTEM_NAME MATCHES "PICO")
     add_compile_options(-c -Wall -Wextra -Wno-unused -Wno-strict-prototypes -pipe -g -O0)
   elseif(UNIX)
-    add_compile_options(-c -Wall -Wextra -Werror -Wshadow -Wunused -Wstrict-prototypes -pipe -g -O0)
+    message("SYLIX IS UNIX!")
+    if(CMAKE_SYSTEM_NAME MATCHES "SylixOS") # sylixos close -Werror
+      add_compile_options(-c -Wall -Wextra -Wshadow -Wunused -Wstrict-prototypes -pipe -g -O0)
+    else()
+      add_compile_options(-c -Wall -Wextra -Werror -Wshadow -Wunused -Wstrict-prototypes -pipe -g -O0)
+    endif()
     # C99 pedantic doesn't like struct anonymous in unix header
     if (NOT CMAKE_C_STANDARD STREQUAL "99")
       add_compile_options(-Wpedantic)

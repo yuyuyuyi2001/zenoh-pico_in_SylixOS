@@ -1,0 +1,35 @@
+# CMake generated Testfile for 
+# Source directory: D:/MSYS2/download/zenoh-pico_in_SylixOS
+# Build directory: D:/MSYS2/download/zenoh-pico_in_SylixOS/debug
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(z_data_struct_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_data_struct_test")
+set_tests_properties(z_data_struct_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;542;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_channels_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_channels_test")
+set_tests_properties(z_channels_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;543;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_collections_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_collections_test")
+set_tests_properties(z_collections_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;544;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_endpoint_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_endpoint_test")
+set_tests_properties(z_endpoint_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;545;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_iobuf_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_iobuf_test")
+set_tests_properties(z_iobuf_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;546;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_msgcodec_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_msgcodec_test")
+set_tests_properties(z_msgcodec_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;547;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_keyexpr_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_keyexpr_test")
+set_tests_properties(z_keyexpr_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;548;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_api_null_drop_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_api_null_drop_test")
+set_tests_properties(z_api_null_drop_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;549;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_api_double_drop_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_api_double_drop_test")
+set_tests_properties(z_api_double_drop_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;550;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_bytes_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_bytes_test")
+set_tests_properties(z_bytes_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;551;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_api_bytes_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_api_bytes_test")
+set_tests_properties(z_api_bytes_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;552;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_api_encoding_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_api_encoding_test")
+set_tests_properties(z_api_encoding_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;553;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_refcount_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_refcount_test")
+set_tests_properties(z_refcount_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;554;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+add_test(z_lru_cache_test "D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/tests/z_lru_cache_test")
+set_tests_properties(z_lru_cache_test PROPERTIES  _BACKTRACE_TRIPLES "D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;555;add_test;D:/MSYS2/download/zenoh-pico_in_SylixOS/CMakeLists.txt;0;")
+subdirs("examples")

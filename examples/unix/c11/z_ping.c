@@ -138,6 +138,7 @@ int main(int argc, char** argv) {
     z_drop(z_move(session));
 }
 
+#ifndef SYLIXOS
 char* getopt(int argc, char** argv, char option) {
     for (int i = 0; i < argc; i++) {
         size_t len = strlen(argv[i]);
@@ -151,6 +152,7 @@ char* getopt(int argc, char** argv, char option) {
     }
     return NULL;
 }
+#endif
 
 struct args_t parse_args(int argc, char** argv) {
     for (int i = 0; i < argc; i++) {
