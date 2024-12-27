@@ -1,0 +1,30 @@
+include(CMakeFindDependencyMacro)
+
+set(ZENOHPICO_FEATURE_UNSTABLE_API 0)
+set(ZENOHPICO_FEATURE_MULTI_THREAD 1)
+set(ZENOHPICO_FEATURE_PUBLICATION 1)
+set(ZENOHPICO_FEATURE_SUBSCRIPTION 1)
+set(ZENOHPICO_FEATURE_QUERY 1)
+set(ZENOHPICO_FEATURE_QUERYABLE 1)
+set(ZENOHPICO_FEATURE_RAWETH_TRANSPORT 0)
+set(ZENOHPICO_FEATURE_INTEREST 1)
+set(ZENOHPICO_FEATURE_LIVELINESS 1)
+
+if(OFF)
+  find_dependency(Threads REQUIRED)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/zenohpicoTargets.cmake")
+
+if(ON)
+  add_library(zenohpico::shared ALIAS zenohpico::zenohpico_shared)
+endif()
+if()
+  add_library(zenohpico::static ALIAS zenohpico::zenohpico_static)
+endif()
+
+if(ON)
+  add_library(zenohpico::lib ALIAS zenohpico::zenohpico_shared)
+else()
+  add_library(zenohpico::lib ALIAS zenohpico::zenohpico_static)
+endif()

@@ -26,7 +26,8 @@ int main(int argc, char **argv) {
     char *llocator = NULL;
     char *clocator = NULL;
     uint8_t *value = NULL;
-    size_t size = 10000;
+    // 最大只支持1024 超过1024无法接收 暂时不知道原因
+    size_t size = 1024;
     (void)argv;
 
     // Init value
@@ -43,7 +44,7 @@ int main(int argc, char **argv) {
         llocator = "udp/224.0.0.224:7447#iface=lo";
     } else {
         mode = "client";
-        clocator = "tcp/127.0.0.1:7447";
+        clocator = "tcp/192.168.23.133:7447";
     }
     // Set config
     z_owned_config_t config;
@@ -88,6 +89,7 @@ int main(int argc, char **argv) {
         z_bytes_from_buf(&payload, value, size, NULL, NULL);
 
         printf("[tx]: Sending packet on %s, len: %d\n", keyexpr, (int)size);
+        // 用z_put发送
         if (z_put(z_loan(s), z_loan(ke), z_move(payload), &options) < 0) {
             printf("Oh no! Put has failed...\n");
             return -1;

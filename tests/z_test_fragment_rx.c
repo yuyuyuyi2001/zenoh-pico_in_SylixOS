@@ -19,6 +19,7 @@
 
 #if Z_FEATURE_SUBSCRIPTION == 1
 void data_handler(z_loaned_sample_t *sample, void *ctx) {
+    printf("enter callback!\n");
     (void)(ctx);
     z_view_string_t keystr;
     z_keyexpr_as_view_string(z_sample_keyexpr(sample), &keystr);
@@ -52,7 +53,7 @@ int main(int argc, char **argv) {
         llocator = "udp/224.0.0.224:7447#iface=lo";
     } else {
         mode = "client";
-        clocator = "tcp/127.0.0.1:7447";
+        clocator = "tcp/192.168.23.133:7447";
     }
     // Set config
     z_owned_config_t config;
@@ -72,12 +73,14 @@ int main(int argc, char **argv) {
         printf("Unable to open session!\n");
         return -1;
     }
+    printf("open sesion success!\n");
     // Start read and lease tasks for zenoh-pico
     if (zp_start_read_task(z_loan_mut(s), NULL) < 0 || zp_start_lease_task(z_loan_mut(s), NULL) < 0) {
         printf("Unable to start read and lease tasks\n");
         z_session_drop(z_session_move(&s));
         return -1;
     }
+    printf("start read and lease task success!\n");
     // Declare subscriber
     z_owned_closure_sample_t callback;
     z_closure(&callback, data_handler, NULL, NULL);
@@ -88,6 +91,7 @@ int main(int argc, char **argv) {
         printf("Unable to declare subscriber.\n");
         return -1;
     }
+    printf("waiting terminal\n");
     // Wait for termination
     char c = '\0';
     while (c != 'q') {

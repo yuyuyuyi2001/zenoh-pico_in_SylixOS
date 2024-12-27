@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
         llocator = "udp/224.0.0.224:7447#iface=lo";
     } else {
         mode = "client";
-        clocator = "tcp/127.0.0.1:7447";
+        clocator = "tcp/192.168.23.133:7447";
     }
     // Set config
     z_owned_config_t config;

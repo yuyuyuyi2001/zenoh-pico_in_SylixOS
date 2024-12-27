@@ -72,7 +72,12 @@ int main(int argc, char **argv) {
         // Clone payload
         z_owned_bytes_t p;
         z_bytes_clone(&p, z_loan(payload));
-        z_publisher_put(z_loan(pub), z_move(p), NULL);
+
+        // 为什么sub收不到嘞？
+        if(z_publisher_put(z_loan(pub), z_move(p), NULL) < 0){
+            printf("z_publisher_put error!\n");
+            break;
+        }
     }
     // Clean up
     z_drop(z_move(pub));
