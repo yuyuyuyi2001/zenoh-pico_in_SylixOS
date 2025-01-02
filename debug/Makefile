@@ -759,6 +759,32 @@ z_liveliness/fast:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_liveliness.dir/build.make examples/CMakeFiles/z_liveliness.dir/build
 .PHONY : z_liveliness/fast
 
+#=============================================================================
+# Target rules for targets named z_throughput_sub
+
+# Build rule for target.
+z_throughput_sub: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 z_throughput_sub
+.PHONY : z_throughput_sub
+
+# fast build rule for target.
+z_throughput_sub/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_sub.dir/build.make examples/CMakeFiles/z_throughput_sub.dir/build
+.PHONY : z_throughput_sub/fast
+
+#=============================================================================
+# Target rules for targets named z_throughput_pub
+
+# Build rule for target.
+z_throughput_pub: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 z_throughput_pub
+.PHONY : z_throughput_pub
+
+# fast build rule for target.
+z_throughput_pub/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_pub.dir/build.make examples/CMakeFiles/z_throughput_pub.dir/build
+.PHONY : z_throughput_pub/fast
+
 src/api/api.o: src/api/api.c.o
 .PHONY : src/api/api.o
 
@@ -3816,6 +3842,8 @@ help:
 	@echo "... z_sub_thr"
 	@echo "... z_test_fragment_rx"
 	@echo "... z_test_fragment_tx"
+	@echo "... z_throughput_pub"
+	@echo "... z_throughput_sub"
 	@echo "... zenohpico_shared"
 	@echo "... src/api/api.o"
 	@echo "... src/api/api.i"

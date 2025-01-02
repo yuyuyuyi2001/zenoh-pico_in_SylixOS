@@ -538,6 +538,34 @@ z_liveliness/fast:
 	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_liveliness.dir/build.make examples/CMakeFiles/z_liveliness.dir/build
 .PHONY : z_liveliness/fast
 
+# Convenience name for target.
+examples/CMakeFiles/z_throughput_sub.dir/rule:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/z_throughput_sub.dir/rule
+.PHONY : examples/CMakeFiles/z_throughput_sub.dir/rule
+
+# Convenience name for target.
+z_throughput_sub: examples/CMakeFiles/z_throughput_sub.dir/rule
+.PHONY : z_throughput_sub
+
+# fast build rule for target.
+z_throughput_sub/fast:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_sub.dir/build.make examples/CMakeFiles/z_throughput_sub.dir/build
+.PHONY : z_throughput_sub/fast
+
+# Convenience name for target.
+examples/CMakeFiles/z_throughput_pub.dir/rule:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/z_throughput_pub.dir/rule
+.PHONY : examples/CMakeFiles/z_throughput_pub.dir/rule
+
+# Convenience name for target.
+z_throughput_pub: examples/CMakeFiles/z_throughput_pub.dir/rule
+.PHONY : z_throughput_pub
+
+# fast build rule for target.
+z_throughput_pub/fast:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_pub.dir/build.make examples/CMakeFiles/z_throughput_pub.dir/build
+.PHONY : z_throughput_pub/fast
+
 unix/c11/z_bytes.o: unix/c11/z_bytes.c.o
 .PHONY : unix/c11/z_bytes.o
 
@@ -1138,6 +1166,54 @@ unix/c11/z_sub_thr.c.s:
 	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_sub_thr.dir/build.make examples/CMakeFiles/z_sub_thr.dir/unix/c11/z_sub_thr.c.s
 .PHONY : unix/c11/z_sub_thr.c.s
 
+unix/c11/z_throughput_pub.o: unix/c11/z_throughput_pub.c.o
+.PHONY : unix/c11/z_throughput_pub.o
+
+# target to build an object file
+unix/c11/z_throughput_pub.c.o:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_pub.dir/build.make examples/CMakeFiles/z_throughput_pub.dir/unix/c11/z_throughput_pub.c.o
+.PHONY : unix/c11/z_throughput_pub.c.o
+
+unix/c11/z_throughput_pub.i: unix/c11/z_throughput_pub.c.i
+.PHONY : unix/c11/z_throughput_pub.i
+
+# target to preprocess a source file
+unix/c11/z_throughput_pub.c.i:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_pub.dir/build.make examples/CMakeFiles/z_throughput_pub.dir/unix/c11/z_throughput_pub.c.i
+.PHONY : unix/c11/z_throughput_pub.c.i
+
+unix/c11/z_throughput_pub.s: unix/c11/z_throughput_pub.c.s
+.PHONY : unix/c11/z_throughput_pub.s
+
+# target to generate assembly for a file
+unix/c11/z_throughput_pub.c.s:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_pub.dir/build.make examples/CMakeFiles/z_throughput_pub.dir/unix/c11/z_throughput_pub.c.s
+.PHONY : unix/c11/z_throughput_pub.c.s
+
+unix/c11/z_throughput_sub.o: unix/c11/z_throughput_sub.c.o
+.PHONY : unix/c11/z_throughput_sub.o
+
+# target to build an object file
+unix/c11/z_throughput_sub.c.o:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_sub.dir/build.make examples/CMakeFiles/z_throughput_sub.dir/unix/c11/z_throughput_sub.c.o
+.PHONY : unix/c11/z_throughput_sub.c.o
+
+unix/c11/z_throughput_sub.i: unix/c11/z_throughput_sub.c.i
+.PHONY : unix/c11/z_throughput_sub.i
+
+# target to preprocess a source file
+unix/c11/z_throughput_sub.c.i:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_sub.dir/build.make examples/CMakeFiles/z_throughput_sub.dir/unix/c11/z_throughput_sub.c.i
+.PHONY : unix/c11/z_throughput_sub.c.i
+
+unix/c11/z_throughput_sub.s: unix/c11/z_throughput_sub.c.s
+.PHONY : unix/c11/z_throughput_sub.s
+
+# target to generate assembly for a file
+unix/c11/z_throughput_sub.c.s:
+	cd /D/MSYS2/download/zenoh-pico_in_SylixOS/debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/z_throughput_sub.dir/build.make examples/CMakeFiles/z_throughput_sub.dir/unix/c11/z_throughput_sub.c.s
+.PHONY : unix/c11/z_throughput_sub.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1177,6 +1253,8 @@ help:
 	@echo "... z_sub_liveliness"
 	@echo "... z_sub_st"
 	@echo "... z_sub_thr"
+	@echo "... z_throughput_pub"
+	@echo "... z_throughput_sub"
 	@echo "... unix/c11/z_bytes.o"
 	@echo "... unix/c11/z_bytes.i"
 	@echo "... unix/c11/z_bytes.s"
@@ -1252,6 +1330,12 @@ help:
 	@echo "... unix/c11/z_sub_thr.o"
 	@echo "... unix/c11/z_sub_thr.i"
 	@echo "... unix/c11/z_sub_thr.s"
+	@echo "... unix/c11/z_throughput_pub.o"
+	@echo "... unix/c11/z_throughput_pub.i"
+	@echo "... unix/c11/z_throughput_pub.s"
+	@echo "... unix/c11/z_throughput_sub.o"
+	@echo "... unix/c11/z_throughput_sub.i"
+	@echo "... unix/c11/z_throughput_sub.s"
 .PHONY : help
 
 

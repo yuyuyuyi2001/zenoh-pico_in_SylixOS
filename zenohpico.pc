@@ -3,6 +3,6 @@ prefix=D:/MSYS2/download/zenoh-pico_in_SylixOS/debug/_install
 Name: zenohpico
 Description: 
 URL: 
-Version: 1.0.20241223dev
+Version: 1.0.20250102dev
 Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib -lzenohpico
