@@ -32,6 +32,7 @@ static z_owned_mutex_t mutex;
 static unsigned long total_received_bytes = 0;
 static z_clock_t start_time;
 static bool warmup_ok = false;
+static unsigned long elapsed_us = 0;
 struct args_t {
     unsigned int size;             // -s
     unsigned int number_of_pings;  // -n
@@ -42,11 +43,23 @@ struct args_t {
 struct args_t parse_args(int argc, char** argv);
 
 void callback(z_loaned_sample_t* sample, void* context) {
-    total_received_bytes += _z_bytes_len(&sample->payload);
-    if (total_received_bytes >= ((struct args_t*)context)->number_of_pings * ((struct args_t*)context)->size && warmup_ok == true) {
-        unsigned long elapsed_us = 0;
+    // total_received_bytes += _z_bytes_len(&sample->payload);
+    // printf("total_received_bytes:%d\n", total_received_bytes);
+    // printf("number_of_ping:%d\n",((struct args_t*)context)->number_of_pings);
+    // printf("context_size:%d\n", ((struct args_t*)context)->size);
+    // if (total_received_bytes >= ((struct args_t*)context)->number_of_pings * ((struct args_t*)context)->size && warmup_ok == true) {
+    //     unsigned long elapsed_us = 0;
+    //     elapsed_us = z_clock_elapsed_us(&start_time);
+    //     printf("elapsed time:%d\n", elapsed_us);
+    //     double throughput = (double)total_received_bytes * 8 * 1000 * 1000 / (elapsed_us * 1024 * 1024);
+    //     printf("throughput: %.2f Mbps\n", throughput);
+    // }else{
+    //     printf("not done\n");
+    // }
+    if(warmup_ok == true){
         elapsed_us = z_clock_elapsed_us(&start_time);
-        double throughput = (double)total_received_bytes * 8 * 1000 * 1000 / (elapsed_us * 1024 * 1024);
+        //example: 1024 * 8 bit / elapsed_s * 1024*  1024 => Mbps
+        double throughput = (double)((struct args_t*)context)->size * 8 * 1000 * 1000 / (elapsed_us * 1024 * 1024);
         printf("throughput: %.2f Mbps\n", throughput);
     }
     z_condvar_signal(z_loan_mut(cond));
@@ -130,10 +143,10 @@ int main(int argc, char** argv) {
 
     for (unsigned int i = 0; i < args.number_of_pings; i++) {
         // Create payload
-        start_time = z_clock_now();
         z_owned_bytes_t payload;
         z_bytes_from_buf(&payload, data, args.size, NULL, NULL);
-
+        
+        start_time = z_clock_now();
         z_publisher_put(z_loan(pub), z_move(payload), NULL);
         z_condvar_wait(z_loan_mut(cond), z_loan_mut(mutex));
     }

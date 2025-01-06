@@ -10,6 +10,14 @@
 
 # Eclipse Zenoh
 
+通过交叉编译，将Zenoh-pico移植到SylixOS上。
+
+已知问题：运行z_ping/z_pong示例程序，无法响应超过2048字节的包。
+
+详细移植报告参见：zenoh-pico_SylixOS移植报告.docx
+
+
+
 The Eclipse Zenoh: Zero Overhead Pub/sub, Store/Query and Compute.
 
 Zenoh (pronounce _/zeno/_) unifies data in motion, data at rest, and computations. It carefully blends traditional pub/sub with geo-distributed storages, queries and computations, while retaining a level of time and space efficiency that is well beyond any of the mainstream stacks.
