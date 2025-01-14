@@ -12,7 +12,7 @@
 
 通过交叉编译，将Zenoh-pico移植到SylixOS上。
 
-已知问题：运行z_ping/z_pong示例程序，无法响应超过2048字节的包。
+已通过所有的测试。跑通example。
 
 详细移植报告参见：zenoh-pico_SylixOS移植报告.docx
 
